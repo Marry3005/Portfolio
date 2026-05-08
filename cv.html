@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – [Prénom Nom]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#f5f2ee; --bg-card:#ffffff; --text:#1c1c1a;
+    --text-muted:#6a6a65; --text-light:#9a9a94;
+    --accent:#c0533a; --accent-light:#faeae6;
+    --border:rgba(0,0,0,0.08); --radius:12px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+
+  nav {
+    position:sticky; top:0; z-index:100;
+    background:rgba(245,242,238,0.93); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner {
+    max-width:1000px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 2rem; height:62px;
+  }
+  .nav-logo { font-family:'DM Serif Display',serif; font-size:1.15rem; color:var(--accent); text-decoration:none; }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color:var(--accent); }
+
+  .page-header {
+    background:var(--accent); padding:4rem 2rem 3rem;
+  }
+  .page-header-inner { max-width:1000px; margin:0 auto; }
+  .page-header h1 {
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(2rem,4vw,3rem); color:white; margin-bottom:0.5rem;
+  }
+  .page-header p { color:rgba(255,255,255,0.7); font-size:1rem; }
+
+  .cv-wrapper {
+    max-width:1000px; margin:0 auto; padding:3rem 2rem 5rem;
+    display:grid; grid-template-columns:280px 1fr; gap:2.5rem;
+  }
+
+  /* COLONNE GAUCHE */
+  .cv-left { display:flex; flex-direction:column; gap:2rem; }
+  .cv-block { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.25rem 1.5rem; }
+  .cv-block-title {
+    font-size:0.7rem; font-weight:700; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--accent);
+    margin-bottom:1rem; padding-bottom:0.5rem;
+    border-bottom:1px solid var(--border);
+  }
+  .cv-contact-item {
+    display:flex; gap:0.6rem; align-items:flex-start;
+    font-size:0.875rem; color:var(--text-muted); margin-bottom:0.6rem;
+  }
+  .cv-contact-item span { flex-shrink:0; }
+  .skill-pill {
+    display:inline-block; margin:0.25rem; padding:0.25rem 0.7rem;
+    background:var(--bg); border:1px solid var(--border);
+    border-radius:999px; font-size:0.78rem; color:var(--text-muted);
+  }
+  .lang-item { margin-bottom:0.75rem; }
+  .lang-name { font-size:0.9rem; font-weight:500; color:var(--text); }
+  .lang-level { font-size:0.8rem; color:var(--text-light); }
+
+  /* COLONNE DROITE */
+  .cv-right { display:flex; flex-direction:column; gap:2rem; }
+  .cv-section { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius); padding:1.5rem; }
+  .cv-section-title {
+    font-size:0.7rem; font-weight:700; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--accent);
+    margin-bottom:1.25rem; padding-bottom:0.5rem;
+    border-bottom:1px solid var(--border);
+  }
+  .cv-entry { margin-bottom:1.25rem; position:relative; padding-left:1rem; }
+  .cv-entry::before {
+    content:''; position:absolute; left:0; top:6px;
+    width:6px; height:6px; border-radius:50%;
+    background:var(--accent); flex-shrink:0;
+  }
+  .cv-entry:last-child { margin-bottom:0; }
+  .cv-entry-date { font-size:0.78rem; color:var(--text-light); margin-bottom:0.15rem; }
+  .cv-entry-title { font-size:0.95rem; font-weight:600; color:var(--text); }
+  .cv-entry-sub { font-size:0.85rem; color:var(--text-muted); }
+  .cv-entry-desc { font-size:0.83rem; color:var(--text-light); margin-top:0.2rem; line-height:1.5; }
+
+  .note {
+    background:#fff9e6; border:1px dashed #e0c050;
+    border-radius:8px; padding:0.6rem 1rem;
+    font-size:0.8rem; color:#856a00; font-style:italic;
+  }
+
+  footer {
+    border-top:1px solid var(--border); padding:1.5rem 2rem;
+    text-align:center; font-size:0.8rem; color:var(--text-light);
+  }
+
+  @media(max-width:680px) {
+    .cv-wrapper { grid-template-columns:1fr; }
+    .nav-links { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">[Prénom Nom]</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <h1>[Prénom Nom]</h1>
+    <p>Technologies de l'Informatique · EPHEC · [Ta ville]</p>
+  </div>
+</div>
+
+<div class="cv-wrapper">
+
+  <!-- ── GAUCHE ── -->
+  <div class="cv-left">
+
+    <div class="cv-block">
+      <p class="cv-block-title">Contact</p>
+      <div class="cv-contact-item"><span>📧</span> [ton.email@exemple.com]</div>
+      <div class="cv-contact-item"><span>📱</span> [+32 4XX XX XX XX]</div>
+      <div class="cv-contact-item"><span>📍</span> [Ta ville, Belgique]</div>
+      <div class="cv-contact-item"><span>🔗</span> <a href="#" style="color:var(--accent);">linkedin.com/in/[profil]</a></div>
+      <div class="cv-contact-item"><span>💻</span> <a href="#" style="color:var(--accent);">github.com/[pseudo]</a></div>
+      <div class="note">📝 Remplace par tes vraies coordonnées.</div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block-title">Compétences techniques</p>
+      <span class="skill-pill">[ex : HTML/CSS]</span>
+      <span class="skill-pill">[JavaScript]</span>
+      <span class="skill-pill">[Python]</span>
+      <span class="skill-pill">[SQL]</span>
+      <span class="skill-pill">[Git]</span>
+      <span class="skill-pill">[Linux]</span>
+      <span class="skill-pill">[Windows Server]</span>
+      <span class="skill-pill">[Ajoute…]</span>
+      <div class="note" style="margin-top:0.75rem;">📝 Garde uniquement ce que tu maîtrises vraiment.</div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block-title">Langues</p>
+      <div class="lang-item">
+        <div class="lang-name">Français</div>
+        <div class="lang-level">Langue maternelle</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">Anglais</div>
+        <div class="lang-level">[Niveau — ex : B2]</div>
+      </div>
+      <div class="lang-item">
+        <div class="lang-name">[Autre langue]</div>
+        <div class="lang-level">[Niveau]</div>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <p class="cv-block-title">Centres d'intérêt</p>
+      <span class="skill-pill">[Intérêt 1]</span>
+      <span class="skill-pill">[Intérêt 2]</span>
+      <span class="skill-pill">[Intérêt 3]</span>
+    </div>
+
+  </div>
+
+  <!-- ── DROITE ── -->
+  <div class="cv-right">
+
+    <div class="cv-section">
+      <p class="cv-section-title">Formation</p>
+      <div class="cv-entry">
+        <div class="cv-entry-date">2023 – en cours</div>
+        <div class="cv-entry-title">Bachelier en Technologies de l'Informatique</div>
+        <div class="cv-entry-sub">EPHEC, Louvain-la-Neuve</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">[Années — ex : 2020–2023]</div>
+        <div class="cv-entry-title">[Diplôme précédent — ex : CESS option Sciences]</div>
+        <div class="cv-entry-sub">[École, Ville]</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">[Années si pertinent]</div>
+        <div class="cv-entry-title">[Autre formation / certificat]</div>
+        <div class="cv-entry-sub">[Organisme]</div>
+      </div>
+      <div class="note">📝 Ajoute ou supprime des entrées selon ton parcours.</div>
+    </div>
+
+    <div class="cv-section">
+      <p class="cv-section-title">Expérience professionnelle</p>
+      <div class="cv-entry">
+        <div class="cv-entry-date">[Dates — ex : Fév. – Mai 2026]</div>
+        <div class="cv-entry-title">Stage – [Intitulé du poste]</div>
+        <div class="cv-entry-sub">[Nom de l'entreprise], [Ville]</div>
+        <div class="cv-entry-desc">[Décris tes 2–3 missions principales en quelques mots]</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">[Dates]</div>
+        <div class="cv-entry-title">[Autre expérience — jobétudiant, bénévolat, projet…]</div>
+        <div class="cv-entry-sub">[Entreprise / contexte]</div>
+        <div class="cv-entry-desc">[Description courte]</div>
+      </div>
+      <div class="note">📝 Commence par ton stage EPHEC, c'est le plus important ici.</div>
+    </div>
+
+    <div class="cv-section">
+      <p class="cv-section-title">Projets académiques</p>
+      <div class="cv-entry">
+        <div class="cv-entry-date">[Année]</div>
+        <div class="cv-entry-title">[Nom du projet]</div>
+        <div class="cv-entry-sub">[Cours ou contexte — ex : Projet intégré TI2]</div>
+        <div class="cv-entry-desc">[Décris ce que vous avez réalisé et ta contribution]</div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">[Année]</div>
+        <div class="cv-entry-title">[Autre projet]</div>
+        <div class="cv-entry-sub">[Contexte]</div>
+        <div class="cv-entry-desc">[Description]</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  Portfolio EPHEC – Technologies de l'Informatique · [Prénom Nom] · 2025–2026
+</footer>
+
+</body>
+</html>
