@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio – [Prénom Nom]</title>
+<title>Portfolio – Marie Pierrard</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -170,7 +170,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">[Prénom Nom]</a>
+    <a href="index.html" class="nav-logo">Marie Pierrard</a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="cv.html">CV</a></li>
@@ -188,33 +188,9 @@
 
 <div class="content">
 
-  <!-- SYNTHÈSE -->
-  <div class="synthese-block">
-    <p class="section-label">Synthèse</p>
-    <h2>Bilan de mon parcours</h2>
-    <p>
-      [PARAGRAPHE 1 — ex : "Cette année m'a permis de développer des compétences aussi bien techniques que
-      transversales. Mon stage m'a confirmé mon orientation professionnelle, et les activités présentées
-      ci-dessous ont été choisies pour répondre à des besoins concrets identifiés dans mon projet professionnel."]
-    </p>
-    <p>
-      [PARAGRAPHE 2 — ex : "J'ai veillé à diversifier les types d'activités : formations en ligne, événements
-      professionnels, projets personnels. Chaque thème est lié à une force que je voulais renforcer ou une
-      faiblesse que je souhaitais combler."]
-    </p>
-    <p>
-      [PARAGRAPHE 3 — ex : "Je ressors de cette expérience avec une vision plus claire de mon avenir professionnel
-      et une meilleure connaissance de mes atouts et de mes axes de progression."]
-    </p>
-    <div class="note">📝 Rédige en "je", minimum 3 paragraphes. Fais le lien avec tes forces/faiblesses et ton projet pro.</div>
-  </div>
-
   <!-- TABLEAU DES ACTIVITÉS -->
   <p class="section-label">Activités</p>
   <h2>Tableau des heures</h2>
-  <p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.4rem;margin-bottom:0.5rem;">
-    Clique sur une ligne pour voir le détail de l'activité et la preuve de participation.
-  </p>
 
   <div class="table-wrapper">
     <table>
@@ -230,54 +206,54 @@
       <tbody>
 
         <!-- ── LIGNE 1 ── -->
-        <tr onclick="openModal('a1')">
-          <td class="td-theme">[Thème 1<br>ex : Formation Web]</td>
-          <td class="td-activite">[Activité — ex : Gérer du code avec Git et GitHub]</td>
-          <td class="td-hours col-reel">[ex : +-12h]</td>
-          <td class="td-valorisees">[ex : 6h]</td>
+        <tr onclick="window.location.href='activite1.html'">
+          <td class="td-theme">Réseau et administrations réseaux</td>
+          <td class="td-activite">Réalisation d'un laboratoire réseau sur du matériel physique</td>
+          <td class="td-hours col-reel">4h</td>
+          <td class="td-valorisees">4h</td>
           <td class="td-action"><span class="btn-voir">Voir ▸</span></td>
         </tr>
 
         <!-- ── LIGNE 2 ── -->
         <tr onclick="openModal('a2')">
-          <td class="td-theme">[Thème 2<br>ex : Formation Web]</td>
-          <td class="td-activite">[Activité — ex : Full Stack avec Node.js, Express et MongoDB]</td>
-          <td class="td-hours col-reel">[ex : +-20h]</td>
-          <td class="td-valorisees">[ex : 10h]</td>
+          <td class="td-theme">Cybersécurité challenge</td>
+          <td class="td-activite">CyberSecurity Challenge Belgium 2023</td>
+          <td class="td-hours col-reel">24h</td>
+          <td class="td-valorisees">12h</td>
           <td class="td-action"><span class="btn-voir">Voir ▸</span></td>
         </tr>
 
         <!-- ── LIGNE 3 ── -->
         <tr onclick="openModal('a3')">
-          <td class="td-theme">[Thème 3<br>ex : Semaine internationale]</td>
-          <td class="td-activite">[Activité — ex : Communication et Développement à Eindhoven]</td>
-          <td class="td-hours col-reel">[ex : +-36h]</td>
-          <td class="td-valorisees">[ex : 10h]</td>
+          <td class="td-theme">Jeux vidéo</td>
+          <td class="td-activite">Équipe esport école</td>
+          <td class="td-hours col-reel"> +50</td>
+          <td class="td-valorisees">10h</td>
           <td class="td-action"><span class="btn-voir">Voir ▸</span></td>
         </tr>
 
         <!-- ── LIGNE 4 ── -->
         <tr onclick="openModal('a4')">
-          <td class="td-theme">[Thème 4<br>ex : Kot à Projet]</td>
-          <td class="td-activite">[Activité — ex : Trésorerie avec Excel et Macros]</td>
-          <td class="td-hours col-reel">[ex : 1 quadrimestre]</td>
-          <td class="td-valorisees">[ex : 10h]</td>
+          <td class="td-theme">Visite</td>
+          <td class="td-activite">Salon multimédia et informatique (Anvers)</td>
+          <td class="td-hours col-reel">7h</td>
+          <td class="td-valorisees">3h</td>
           <td class="td-action"><span class="btn-voir">Voir ▸</span></td>
         </tr>
 
         <!-- ── LIGNE 5 ── -->
         <tr onclick="openModal('a5')">
-          <td class="td-theme">[Thème 5<br>ex : À compléter]</td>
-          <td class="td-activite">[Activité 5 — à remplir]</td>
-          <td class="td-hours col-reel">[Xh]</td>
-          <td class="td-valorisees">[Xh]</td>
+          <td class="td-theme">Conférence</td>
+          <td class="td-activite">Conférence Cloud M365 & Azure </td>
+          <td class="td-hours col-reel">2h</td>
+          <td class="td-valorisees">2h</td>
           <td class="td-action"><span class="btn-voir">Voir ▸</span></td>
         </tr>
 
         <!-- ── LIGNE 6 ── -->
         <tr onclick="openModal('a6')">
-          <td class="td-theme">[Thème 6<br>ex : À compléter]</td>
-          <td class="td-activite">[Activité 6 — à remplir]</td>
+          <td class="td-theme">Job étudiant</td>
+          <td class="td-activite">étudiante chez colruyt</td>
           <td class="td-hours col-reel">[Xh]</td>
           <td class="td-valorisees">[Xh]</td>
           <td class="td-action"><span class="btn-voir">Voir ▸</span></td>
@@ -303,50 +279,6 @@
      et ajoute une image de preuve dans .proof-area
 ═══════════════════════════════════════════════════════════════ -->
 
-<!-- MODAL 1 -->
-<div class="modal-overlay" id="modal-a1">
-  <div class="modal">
-    <div class="modal-header">
-      <button class="modal-close" onclick="closeModal('a1')">✕</button>
-      <span class="modal-tag">[Type — ex : Formation en ligne]</span>
-      <h3>[Titre de l'activité 1<br>ex : Gérer du code avec Git et GitHub]</h3>
-      <div class="modal-meta">
-        <span><strong>[6h]</strong> valorisées</span>
-        <span><strong>[Mois Année]</strong></span>
-        <span>Lié à : <strong>[force / faiblesse]</strong></span>
-      </div>
-    </div>
-    <div class="modal-body">
-      <div class="modal-section">
-        <h4>Cadre de l'activité</h4>
-        <p>[Décris le contexte : quelle plateforme, quel organisme, comment tu as trouvé cette formation, pourquoi tu l'as choisie.]</p>
-      </div>
-      <div class="modal-section">
-        <h4>Ce que j'ai appris</h4>
-        <p>[Décris concrètement tes apprentissages : concepts, outils, compétences techniques ou transversales.]</p>
-        <p>[Ajoute un deuxième paragraphe si nécessaire.]</p>
-      </div>
-      <div class="modal-section">
-        <h4>Lien avec mon projet professionnel</h4>
-        <p>[Explique pourquoi cette activité est pertinente pour toi : en quoi répond-elle à une force ou faiblesse identifiée ? Quel impact sur ton projet pro ?]</p>
-        <div class="note">📝 Minimum 1 page au total. Utilise "je" partout.</div>
-      </div>
-      <div class="modal-section">
-        <h4>Preuve de participation</h4>
-        <div class="proof-area">
-          [Insère ici ton image de preuve]<br>
-          <code style="font-size:0.78rem;">&lt;img src="../preuves/activite1-preuve.jpg" alt="Preuve activité 1"&gt;</code>
-          <!-- Décommente et adapte la ligne ci-dessous quand tu as ton image :
-          <img src="../preuves/activite1-preuve.jpg" alt="Certificat activité 1">
-          -->
-          <div class="note" style="text-align:left;margin-top:0.75rem;">
-            📝 La preuve doit être nominative et vérifiable (certificat, photo, attestation, ticket d'entrée…).
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- MODAL 2 -->
 <div class="modal-overlay" id="modal-a2">

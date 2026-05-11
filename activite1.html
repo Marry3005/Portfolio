@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laboratoire réseau – Portfolio Marie Pierrard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#111111; --bg-card:#1a1a1a; --text:#f0f0f0;
+    --text-muted:#aaaaaa; --text-light:#666666;
+    --accent:#cc0000; --accent-light:#2a0000;
+    --border:rgba(255,255,255,0.08); --radius:12px;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+
+  nav {
+    position:sticky; top:0; z-index:100;
+    background:rgba(17,17,17,0.95); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-inner {
+    max-width:1000px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 2rem; height:62px;
+  }
+  .nav-logo { font-family:'DM Serif Display',serif; font-size:1.15rem; color:var(--accent); text-decoration:none; }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { font-size:0.9rem; font-weight:500; color:var(--text-muted); text-decoration:none; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--accent); }
+
+  .page-header { background:var(--accent); padding:4rem 2rem 3rem; }
+  .page-header-inner { max-width:800px; margin:0 auto; }
+  .back-link {
+    display:inline-flex; align-items:center; gap:0.4rem;
+    font-size:0.85rem; color:rgba(255,255,255,0.7);
+    text-decoration:none; margin-bottom:1.5rem; transition:color 0.2s;
+  }
+  .back-link:hover { color:white; }
+  .header-tag {
+    display:inline-block; padding:0.2rem 0.8rem;
+    background:rgba(255,255,255,0.2); border-radius:999px;
+    font-size:0.78rem; color:rgba(255,255,255,0.9); margin-bottom:0.75rem;
+  }
+  .page-header h1 {
+    font-family:'DM Serif Display',serif;
+    font-size:clamp(1.8rem,4vw,2.8rem); color:white; line-height:1.2; margin-bottom:1rem;
+  }
+  .header-meta { display:flex; gap:2rem; flex-wrap:wrap; }
+  .header-meta span { font-size:0.85rem; color:rgba(255,255,255,0.7); }
+  .header-meta strong { color:white; }
+
+  .content { max-width:800px; margin:0 auto; padding:3rem 2rem 5rem; }
+
+  .section-block { margin-bottom:2.5rem; }
+  .section-block h2 {
+    font-family:'DM Serif Display',serif; font-size:1.4rem;
+    color:var(--text); margin-bottom:1rem;
+    padding-bottom:0.5rem; border-bottom:1px solid var(--border);
+  }
+  .section-block p { color:var(--text-muted); line-height:1.85; font-size:1rem; }
+  .section-block p + p { margin-top:1rem; }
+
+  .proof-area {
+    background:#0d0d0d; border:2px dashed rgba(255,26,26,0.3);
+    border-radius:var(--radius); padding:1.5rem; margin-top:1rem;
+  }
+  .proof-area p { font-size:0.875rem; color:var(--text-muted); margin-bottom:1rem; }
+  .proof-images { display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:1rem; margin-top:1rem; }
+  .proof-images img { width:100%; border-radius:8px; border:1px solid var(--border); }
+  .proof-placeholder {
+    background:#1a1a1a; border:1px dashed var(--border);
+    border-radius:8px; padding:2rem; text-align:center;
+    color:var(--text-light); font-size:0.85rem;
+  }
+
+  .nav-bottom {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border);
+  }
+  .btn-nav {
+    display:inline-flex; align-items:center; gap:0.4rem;
+    padding:0.6rem 1.4rem; border:1.5px solid var(--accent);
+    border-radius:999px; font-size:0.875rem; font-weight:500;
+    color:var(--accent); text-decoration:none; transition:background 0.2s, color 0.2s;
+  }
+  .btn-nav:hover { background:var(--accent); color:white; }
+
+  footer { border-top:1px solid var(--border); padding:1.5rem 2rem; text-align:center; font-size:0.8rem; color:white; }
+
+  @media(max-width:680px) { .nav-links { display:none; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Marie Pierrard</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <a href="portfolio.html" class="back-link">← Retour au portfolio</a>
+    <span class="header-tag">Travaux pratiques · EPHEC</span>
+    <h1>Réalisation d'un laboratoire réseau sur matériel physique</h1>
+    <div class="header-meta">
+      <span><strong>4h</strong> valorisées</span>
+      <span><strong>2023</strong></span>
+      <span>Lié à : <strong>Compétences techniques en réseau</strong></span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section-block">
+    <h2>1. Cadre de l'activité</h2>
+    <p>
+      Dans le cadre de mes cours de réseau à l'EPHEC, j'ai eu l'opportunité de réaliser un laboratoire réseau sur du matériel physique. Contrairement aux simulations logicielles que nous utilisons habituellement, cette activité m'a permis de manipuler directement du vrai équipement réseau : des routeurs, des switches et des câbles réseau.
+    </p>
+    <p>
+      Ce type d'exercice pratique est particulièrement formateur car il confronte aux réalités du terrain, loin des environnements virtuels où les erreurs n'ont pas de conséquences concrètes.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>2. Ce que j'ai appris</h2>
+    <p>
+      Au cours de cette activité, j'ai appris à configurer un réseau sur du matériel physique. J'ai pu manipuler des équipements réels et comprendre concrètement comment les données circulent d'un appareil à l'autre au sein d'un réseau local.
+    </p>
+    <p>
+      Cette expérience m'a permis de consolider les notions théoriques vues en cours et de les mettre en pratique dans un contexte réel. Travailler sur du matériel physique m'a également appris à être rigoureuse et méthodique, car la moindre erreur de configuration peut rendre le réseau inopérant.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>3. Lien avec mon projet professionnel</h2>
+    <p>
+      Cette activité est directement liée à mon projet professionnel dans le domaine du support informatique et de l'esport. En effet, les grands événements esport nécessitent des infrastructures réseau fiables et performantes. En tant que staff technique lors de ces événements, il est indispensable de maîtriser la configuration et la gestion d'un réseau physique.
+    </p>
+    <p>
+      Cette activité m'a permis de renforcer une compétence technique fondamentale que je pourrai valoriser aussi bien dans le support informatique que dans l'organisation d'événements gaming. Elle répond directement à mon besoin de développer mes compétences en administration réseau, que j'ai identifié comme un axe d'amélioration important dans mon projet professionnel.
+    </p>
+  </div>
+
+  <div class="section-block">
+    <h2>4. Preuve de participation</h2>
+    <div class="proof-area">
+      <p>Captures d'écran réalisées lors du laboratoire réseau à l'EPHEC en 2023.</p>
+      <div class="proof-images">
+        <!-- Remplace les lignes ci-dessous par tes vraies captures :
+        <img src="preuves/reseau-1.jpg" alt="Capture réseau 1">
+        <img src="preuves/reseau-2.jpg" alt="Capture réseau 2">
+        <img src="preuves/reseau-3.jpg" alt="Capture réseau 3">
+        -->
+        <div class="proof-placeholder">📸 Ajoute ta capture 1<br><small>img src="preuves/reseau-1.jpg"</small></div>
+        <div class="proof-placeholder">📸 Ajoute ta capture 2<br><small>img src="preuves/reseau-2.jpg"</small></div>
+        <div class="proof-placeholder">📸 Ajoute ta capture 3<br><small>img src="preuves/reseau-3.jpg"</small></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-bottom">
+    <a href="portfolio.html" class="btn-nav">← Retour au portfolio</a>
+    <a href="activite2.html" class="btn-nav">Activité suivante →</a>
+  </div>
+
+</div>
+
+<footer>
+  Portfolio EPHEC – Technologies de l'Informatique · Marie Pierrard · 2025–2026
+</footer>
+
+</body>
+</html>
